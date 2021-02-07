@@ -71,12 +71,13 @@ $(document).ready(function() {
     $.ajax({
       url: requestUrl + '/?' + $.param({
         taskId: taskId
+
       }),
       method: 'DELETE',
       success: function() {
         parentEl.slideUp(400, function() { parentEl.remove(); });
       }
-    })
+    });
   }
 
   function handleTaskSubmitRequest(event) {
