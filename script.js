@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  var apiRoot = 'https://sleepy-retreat-94072.herokuapp.com/v1/task/';
+  var apiRoot = 'http://localhost:8080/v1/task/';
   var datatableRowTemplate = $('[data-datatable-row-template]').children()[0];
   var tasksContainer = $('[data-tasks-container]');
 
@@ -74,11 +74,11 @@ $(document).ready(function() {
       }),
       method: 'DELETE',
       success: function() {
-        parentEl.slideUp(400, function() { parentEl.remove(); });
+        parentEl.slideUp(400, function() { parentEl.remove();
+ });
       }
     })
   }
-
 
   function handleTaskSubmitRequest(event) {
     event.preventDefault();
